@@ -1,18 +1,17 @@
 package com.example.flywaydemo.domain;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /**
  * Created by rajeevkumarsingh on 20/08/17.
  */
 @Entity
-@Table(name = "USER")
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
